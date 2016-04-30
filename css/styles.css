@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/Avenir.ttc);
+
+}
+@font-face {
+    font-family: Ostrich;
+    src: url('../fonts/OstrichSansPro Regular.otf');
+
+}
+@font-face {
+    font-family: Ostrich-Black;
+    src: url('../fonts/OstrichSansPro Black.otf');
+
+}
+@font-face {
+    font-family: Ostrich-Bold;
+    src: url('../fonts/OstrichSansPro DemiBold.otf');
+
+}
+body{
+    font-family: Avenir;
+    font-size: 14px;
+    overflow: hidden;
+}
+.contenedor-main{
+    min-height: 500px;
+    
+}
+.caja{
+    text-align: center;
+    min-height: 100px;
+    padding-top: 40px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.barra-abajo{
+    background-color: #fff;
+}
+.titulo{
+    padding-top: 15px;
+    font-size: 2rem;
+}
+
+.campo {
+    min-height: 1200px;
+    overflow: hidden;
+    background-image: url('../images/campo.jpg');
+    background-size: 1500px;
+    background-repeat: no-repeat;
+    background-position: 0px -90px;
+    position: relative;
+}
+.dot{
+    font-family: Avenir;
+    position: absolute;
+    background-color: #fff;
+    color: #5C70D6;
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    float:left;
+    border: 2px solid #5C70D6;
+    border-radius: 100%;
+    padding-left: 11px;
+    padding-top: 6px;
+    z-index: 10;
+}
+
+.pulsar {
+    border: 3px solid #5C70D6;
+    -webkit-border-radius: 35px;
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: -8px;
+    left: -13px;
+    float:left;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;
+    z-index:5;
+}
+.numero{
+    position: relative;
+    top: -35px;
+    left: 0px;
+    float:left;
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(3, 3); opacity: 0.0;}
+}
