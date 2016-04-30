@@ -30,6 +30,8 @@
       
     <div class="contenedor-main">
         <div class="campo">
+            
+            
             <div class="dot" style="top: 325px; left:378px;"><div class="pulsar"></div><div data-toggle="popover" title="Popover title" data-content="Prueva popover" class="numero">1</div></div>
             <div class="dot" style="top: 225px; left:709px;"><div class="pulsar"></div><div class="numero">2</div></div>
             <div class="dot" style="top: 325px; left:1078px;"><div class="pulsar"></div><div class="numero">3</div></div>
@@ -42,7 +44,7 @@
         <div class="container">
             <div class="row" id="botones">
                 <div class="col-md-3 ">
-                    <div class="caja">Venta de aridos</div>
+                    <div class="caja" data-toggle="modal" data-target="#infoModal">Venta de aridos</div>
                 </div>
                 <div class="col-md-3">
                     <div class="caja">Alquiler de camiones</div>
@@ -56,10 +58,47 @@
             </div>
         </div>
     </nav>
+      
+      
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    
+    $(document).ready(function(){
+        
+        
+        $('#infoModal').on('show.bs.modal', function (e) {
+            console.log("Modal open!");
+            $(".campo").css("-webkit-filter","blur(4px)");
+        });
+        $('#infoModal').on('hidden.bs.modal',function(e){
+            console.log("Modal close!");
+            $(".campo").css("-webkit-filter","none");
+        });
+
+    });
+    </script>
   </body>
 </html>
