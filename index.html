@@ -20,7 +20,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" id="nav-top">
       <div class="container">
           <div class="row">
               <div class="titulo">Movimientos de Suelo Pilar SRL</div>
@@ -90,13 +90,15 @@
         
         $('#infoModal').on('show.bs.modal', function (e) {
             console.log("Modal open!");
-            $(".row").css("-webkit-filter","blur(4px)");
-            $(".campo").css("-webkit-filter","blur(4px)");
+            $('.campo').addClass('blur');
+            $('#botones').addClass('blur');
+            $('#nav-top').addClass('blur');
         });
         $('#infoModal').on('hidden.bs.modal',function(e){
             console.log("Modal close!");
-            $(".campo").css("-webkit-filter","none");
-            $(".row").css("-webkit-filter","none");
+            $('.campo').removeClass('blur');
+            $('#botones').removeClass('blur');
+            $('#nav-top').removeClass('blur');
         });
 
     });

@@ -18,11 +18,12 @@
     src: url('../fonts/OstrichSansPro DemiBold.otf');
 
 }
-.campo{
-transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    transition-delay: 0.2s;
+.blur{
+    -webkit-filter: blur(4px);
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.5s;
 }
 body{
     font-family: Avenir;
