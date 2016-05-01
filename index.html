@@ -32,10 +32,10 @@
         <div class="campo">
             
             
-            <div class="dot" data-toggle="modal" data-target="#infoModal" style="top: 325px; left:378px;"><div class="pulsar"></div><div class="numero" >1</div></div>
-            <div class="dot" data-toggle="modal" data-target="#infoModal" style="top: 225px; left:709px;"><div class="pulsar"></div><div class="numero">2</div></div>
-            <div class="dot" data-toggle="modal" data-target="#infoModal" style="top: 325px; left:1078px;"><div class="pulsar"></div><div class="numero">3</div></div>
-            <div class="dot" data-toggle="modal" data-target="#infoModal" style="top: 525px; left:778px;"><div class="pulsar"></div><div class="numero">4</div></div>
+            <div class="dot boton-acceso" tipo-contenido="aridos" data-toggle="modal" data-target="#infoModal" style="top: 325px; left:378px;"><div class="pulsar"></div><div class="numero" >1</div></div>
+            <div class="dot boton-acceso" tipo-contenido="camiones" data-toggle="modal" data-target="#infoModal" style="top: 225px; left:709px;"><div class="pulsar"></div><div class="numero">2</div></div>
+            <div class="dot boton-acceso" tipo-contenido="maquinas" data-toggle="modal" data-target="#infoModal" style="top: 325px; left:1078px;"><div class="pulsar"></div><div class="numero">3</div></div>
+            <div class="dot boton-acceso" tipo-contenido="suelos" data-toggle="modal" data-target="#infoModal" style="top: 525px; left:778px;"><div class="pulsar"></div><div class="numero">4</div></div>
         </div>
     </div>
       
@@ -44,16 +44,16 @@
         <div class="container">
             <div class="row" id="botones">
                 <div class="col-md-3 ">
-                    <div class="caja" data-toggle="modal" data-target="#infoModal">Venta de aridos</div>
+                    <div class="caja boton-acceso" tipo-contenido="aridos" data-toggle="modal" data-target="#infoModal">Venta de aridos</div>
                 </div>
                 <div class="col-md-3">
-                    <div class="caja" data-toggle="modal" data-target="#infoModal">Alquiler de camiones</div>
+                    <div class="caja boton-acceso" tipo-contenido="camiones" data-toggle="modal" data-target="#infoModal">Alquiler de camiones</div>
                 </div>
                 <div class="col-md-3">
-                    <div class="caja" data-toggle="modal" data-target="#infoModal">Alquiler de Maquinas</div>
+                    <div class="caja boton-acceso" tipo-contenido="maquinas" data-toggle="modal" data-target="#infoModal">Alquiler de Maquinas</div>
                 </div>
                 <div class="col-md-3">
-                    <div class="caja" data-toggle="modal" data-target="#infoModal">Movimiento de suelos</div>
+                    <div class="caja boton-acceso" tipo-contenido="suelos" data-toggle="modal" data-target="#infoModal">Movimiento de suelos</div>
                 </div>
             </div>
         </div>
@@ -87,6 +87,13 @@
     <script>
     
     $(document).ready(function(){
+        
+        
+        $('[tipo-contenido]').click(function(){
+            console.log('Click en boton!');
+            $('.modal .modal-body').html('Se cargo el elemento:'+$(this).attr("tipo-contenido"));
+            
+        });
         
         $('#infoModal').on('show.bs.modal', function (e) {
             console.log("Modal open!");
