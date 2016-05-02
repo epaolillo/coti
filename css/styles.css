@@ -53,9 +53,9 @@ body{
     min-height: 1200px;
     overflow: hidden;
     background-image: url('../images/campo.jpg');
-    background-size: 1500px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: 0px -90px;
+    background-position: 0px -200px;
     position: relative;
 }
 .dot{
